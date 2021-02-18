@@ -122,6 +122,10 @@ input, select, textarea {
 		line-height: 1.75;
 	}
 
+	.module-list-item{
+		margin-top: 3pt;
+	}
+
 		@media screen and (max-width: 1680px) {
 
 			body, input, select, textarea {
