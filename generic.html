@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>Generic - Hyperspace by HTML5 UP</title>
+		<title>文章标题</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -16,12 +16,16 @@
 
 		<!-- Header -->
 			<header id="header">
-				<a href="index.html" class="title">Hyperspace</a>
+				<a href="index.html" class="title">程羚</a>
 				<nav>
 					<ul>
-						<li><a href="index.html">Home</a></li>
-						<li><a href="generic.html" class="active">Generic</a></li>
-						<li><a href="elements.html">Elements</a></li>
+						<li><a href="index.html">主页</a></li>
+						<li><a href="index.html">分类</a></li>
+						<!-- 可以制作一个下拉分类框在这里 -->
+						<li style="width: 10pt"></li>
+						<li><a href="#" class="button small">登录</a></li>
+
+						<!-- <li><a href="elements.html">Elements</a></li> -->
 					</ul>
 				</nav>
 			</header>
@@ -32,10 +36,49 @@
 				<!-- Main -->
 					<section id="main" class="wrapper">
 						<div class="inner">
-							<h1 class="major">A Generic Page</h1>
-							<span class="image fit"><img src="images/pic04.jpg" alt="" /></span>
-							<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fergiat. Pellentesque in mi eu massa lacinia malesuada et a elit. Donec urna ex, lacinia in purus ac, pretium pulvinar mauris. Curabitur sapien risus, commodo eget turpis at, elementum convallis elit. Pellentesque enim turpis, hendrerit tristique.</p>
-							<p>Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fersapien risus, commodo eget turpis at, elementum convallis elit. Pellentesque enim turpis, hendrerit tristique lorem ipsum dolor.</p>
+							<h1 class="major">几种跨平台解决方案：React Native、Kotlin、Flutter、Swift</h1>
+							<!-- <span class="image fit"><img src="images/pic04.jpg" alt="" /></span> -->
+							<div class="postBody">
+                
+<div id="cnblogs_post_body" class="blogpost-body cnblogs-markdown">
+    <h1 id="react-native">React Native</h1>
+<p><img src="https://user-gold-cdn.xitu.io/2019/4/1/169d67aa7218a194?imageView2/0/w/1280/h/960/format/webp/ignore-error/1" alt="avatar" loading="lazy"></p>
+<blockquote>
+<p>在 React 框架中，JSX 源码通过 React 框架最终渲染到了浏览器的真实 DOM 中，而在 React Native 框架中，JSX 源码通过 React Native 框架编译后，与Native原生的UI组件进行映射，用原生代替DOM元素来渲染，在UI渲染上非常接近Native App。</p>
+</blockquote>
+<h5 id="优点：">优点：</h5>
+<ul>
+<li>相比Xcode中原生代码需要较长时间的编译，React Native 采用热加载的即时编译方式</li>
+<li>React Native 可以通过 JSBundle 即时更新 App。相比原来冗长的审核和上传过程，发布和测试新功能的效率大幅提高。</li>
+<li>React Native摆脱了WebView的交互和性能问题，同时可以直接套用网页开发中的css布局机制。脱了 autolayout 和 frame 布局中繁琐的数学计算，更加直接简便。</li>
+</ul>
+<h5 id="缺点：">缺点：</h5>
+<ul>
+<li>目前的React Native 官方文档中可以发现仍有部分组件和API都区分了Android 和 IOS 版本,即便是共享组件,也会有平台独享的函数。也就是说仍不能真正实现严格意义上的“一套代码，多平台使用”。</li>
+<li>动画性能差：React Native 在动画效率和性能的支持还存在一些问题，性能上不如原生Api。</li>
+</ul>
+<h1 id="kotlin-multiplatform">kotlin Multiplatform</h1>
+<p>Netflix就是使用kotlin Multiplatform来编写的平台中立性业务逻辑，并通过<strong>Kotlin/Native</strong>将其编译为分别面向Android的Kotlin库和面向ios的原生通用框架。</p>
+<h1 id="flutter">Flutter</h1>
+<p>flutter基于Dart语言（个人感觉很不好用...）</p>
+<h5 id="缺点：-1">缺点：</h5>
+<ul>
+<li>flutter基本上是Android优先的开发环境，从底层开始就依赖Android的Material Design。如果ios的flutter出现错误，只能等待谷歌修复。</li>
+<li>flutter的Skia渲染引擎可以让应用模仿原生的外观和体验，但并不会使用原生按钮、切换、滚动条、表视图或者其他界面和导航元素。</li>
+<li>此外，flutter的相关文档很少，我在学习的过程中，即使是按照官方文档敲写demo，也遇到了很多bug，只能慢慢的调试找问题所在。也就是说，如果要精通dart及flutter，成本是很高的。</li>
+</ul>
+<h1 id="swiftui">SwiftUI</h1>
+<p>目前苹果也在推进自己的下一代声明开发技术：SwiftUI。虽不能支持Android应用，但恶意一次性支持所有苹果平台：iOS、iPadOS、macOS、watchOS和tvOS。</p>
+
+</div>
+<div id="MySignature"></div>
+<div class="clear"></div>
+<div id="blog_post_info_block">
+    <div id="blog_post_info"></div>
+    <div class="clear"></div>
+    <div id="post_next_prev"></div>
+</div>
+            </div>
 						</div>
 					</section>
 
