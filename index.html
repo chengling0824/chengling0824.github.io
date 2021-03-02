@@ -140,10 +140,11 @@
 						var arr = articleUrl.split("/");
 						var nameArr = arr[2].split("-");
 						var timeArr = nameArr.slice(0,3);
+						print(nameArr);
 						var timeText = timeArr[0]+"年"+timeArr[1]+"月"+timeArr[2]+"日";
 						recentPostBox.innerHTML += "<li class='module-list-item'>"+
 							// "<span>"+timeText+"&nbsp;</span>"+
-							"<a href='generic.html?"+articleUrl+">"+ nameArr+"</a>"+
+							"<a href='generic.html?"+articleUrl+">"+ arr[2]+"</a>"+
 							"</li>";
 					});
 				})
