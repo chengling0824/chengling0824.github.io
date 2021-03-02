@@ -114,7 +114,7 @@
 			<footer id="footer" class="wrapper style1-alt">
 				<div class="inner">
 					<ul class="menu">
-						<li>&copy; Untitled. All rights reserved.</li><li>如有问题，欢迎大佬指正</li><li> wechat：olinachenry</li>
+						&nbsp;<li>&copy; Untitled. All rights reserved.</li><li>如有问题，欢迎大佬指正</li><li> wechat：olinachenry</li>
 					</ul>
 				</div>
 			</footer>
@@ -142,8 +142,8 @@
 						var timeArr = nameArr.slice(0,3);
 						var timeText = timeArr[0]+"年"+timeArr[1]+"月"+timeArr[2]+"日";
 						recentPostBox.innerHTML += "<li class='module-list-item'>"+
-							"<span>"+timeText+"</span>"+
-							"<a href='generic.html?url='+articleUrl >"+ nameArr[3]+"</a>"+
+							"<span>"+timeText+"&nbsp;</span>"+
+							"<a href='generic.html?"+articleUrl+">"+ nameArr[3]+"</a>"+
 							"</li>";
 					});
 				})
@@ -160,7 +160,7 @@
 				// 		// 	var timeArr = nameArr.slice(0,2);
 				// 		// 	var timeText = timeArr[0]+"年"+timeArr[1]+"月"+timeArr[2]+"日";
 				// 		// 	recentPostBox.innerHTML += "<li class='module-list-item'>"+
-				// 		// 		"<span>"+time+"</span>"+
+				// 		// 		"<span>"+timeText+"</span>"+
 				// 		// 		"<a href='generic.html?url='+articleUrl >{{nameArr[3]}}</a>"+
 				// 		// 		"</li>";
 				// 		// });
