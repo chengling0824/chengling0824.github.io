@@ -130,46 +130,57 @@
 			<script src="assets/json/recentPost.json"></script>
 			<script>
 				// 获取最近发布文章的路径并渲染
-				$.getJSON("assets/json/recentPost.json",function(datas){
-					var recentPostBox = document.getElementById("recentPostBox");
-					// print(datas);
-					for(var i=0;i<datas.length;i++){
-						var arr = articleUrl.split("/");
-						var nameArr = arr[2].toString().split("-");
-						var timeArr = nameArr.slice(0,3);
-						// print(nameArr);
-						var timeText = timeArr[0]+"年"+timeArr[1]+"月"+timeArr[2]+"日";
-						recentPostBox.innerHTML += "<li class='module-list-item'>"+
-							// "<span>"+timeText+"&nbsp;</span>"+
-							"<a href='generic.html?"+articleUrl+">"+ arr[2]+"</a>"+
-							"</li>";
-					}
-					// datas.forEach(articleUrl => {
-						
-					// });
-				})
-				// $.ajax({
-				// 	type:"get", 
-				// 	url: "assets/json/recentPost.json", 
-				// 	dataType:"json",
-				// 	success:function(datas) {
-				// 		var recentPostBox = document.getElementById("recentPostBox");
-				// 		print(datas);
-				// 		// datas.forEach(articleUrl => {
-				// 		// 	var arr = articleUrl.split("/");
-				// 		// 	var nameArr = arr[2].split("-");
-				// 		// 	var timeArr = nameArr.slice(0,2);
-				// 		// 	var timeText = timeArr[0]+"年"+timeArr[1]+"月"+timeArr[2]+"日";
-				// 		// 	recentPostBox.innerHTML += "<li class='module-list-item'>"+
-				// 		// 		"<span>"+timeText+"</span>"+
-				// 		// 		"<a href='generic.html?url='+articleUrl >{{nameArr[3]}}</a>"+
-				// 		// 		"</li>";
-				// 		// });
-				// 	},
-				// 	error:function() {
-				// 		alert("请求失败");
+				// $.getJSON("assets/json/recentPost.json",function(datas){
+				// 	var recentPostBox = document.getElementById("recentPostBox");
+				// 	// print(datas);
+				// 	for(var i=0;i<datas.length;i++){
+				// 		var arr = articleUrl.split("/");
+				// 		var nameArr = arr[2].toString().split("-");
+				// 		var timeArr = nameArr.slice(0,3);
+				// 		// print(nameArr);
+				// 		var timeText = timeArr[0]+"年"+timeArr[1]+"月"+timeArr[2]+"日";
+				// 		recentPostBox.innerHTML += "<li class='module-list-item'>"+
+				// 			// "<span>"+timeText+"&nbsp;</span>"+
+				// 			"<a href='generic.html?"+articleUrl+">"+ arr[2]+"</a>"+
+				// 			"</li>";
 				// 	}
-				// });
+				// 	// datas.forEach(articleUrl => {
+						
+				// 	// });
+				// })
+				$.ajax({
+					type:"get", 
+					url: "assets/json/recentPost.json", 
+					dataType:"json",
+					success:function(datas) {
+						var recentPostBox = document.getElementById("recentPostBox");
+						// print(datas);
+						// datas.forEach(articleUrl => {
+						// 	var arr = articleUrl.split("/");
+						// 	var nameArr = arr[2].split("-");
+						// 	var timeArr = nameArr.slice(0,2);
+						// 	var timeText = timeArr[0]+"年"+timeArr[1]+"月"+timeArr[2]+"日";
+						// 	recentPostBox.innerHTML += "<li class='module-list-item'>"+
+						// 		"<span>"+timeText+"</span>"+
+						// 		"<a href='generic.html?url='+articleUrl >{{nameArr[3]}}</a>"+
+						// 		"</li>";
+						// });
+						for(var i in datas){
+							var articleUrl = datas[i];
+							var arr = articleUrl.split("/");
+							var nameArr = arr[2].split("-");
+							var timeArr = nameArr.slice(0,2);
+							var timeText = timeArr[0]+"年"+timeArr[1]+"月"+timeArr[2]+"日";
+							recentPostBox.innerHTML += "<li class='module-list-item'>"+
+								"<span>"+timeText+"</span>"+
+								"<a href='generic.html?url='+articleUrl >{{nameArr[3]}}</a>"+
+								"</li>";
+						}
+					},
+					error:function() {
+						alert("文章请求失败");
+					}
+				});
 			</script>
 
 	</body>
