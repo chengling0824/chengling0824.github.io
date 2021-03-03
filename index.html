@@ -133,10 +133,7 @@
 				$.getJSON("assets/json/recentPost.json",function(datas){
 					var recentPostBox = document.getElementById("recentPostBox");
 					print(datas);
-					// datas.forEach(function(articleUrl){
-
-					// });
-					datas.forEach(articleUrl => {
+					for(var i=0;i<datas.length;i++){
 						var arr = articleUrl.split("/");
 						var nameArr = arr[2].toString().split("-");
 						var timeArr = nameArr.slice(0,3);
@@ -146,7 +143,10 @@
 							// "<span>"+timeText+"&nbsp;</span>"+
 							"<a href='generic.html?"+articleUrl+">"+ arr[2]+"</a>"+
 							"</li>";
-					});
+					}
+					// datas.forEach(articleUrl => {
+						
+					// });
 				})
 				// $.ajax({
 				// 	type:"get", 
