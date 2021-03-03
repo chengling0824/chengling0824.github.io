@@ -154,7 +154,7 @@
 					dataType:"json",
 					success:function(datas) {
 						var recentPostBox = document.getElementById("recentPostBox");
-						for(var i in datas){
+						for(var i=0;i<datas.length;i++){
 							var articleUrl = datas[i-1];
 							var arr = articleUrl.split("/");
 							// var nameArr = arr[2].split("-");
