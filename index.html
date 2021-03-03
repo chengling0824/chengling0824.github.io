@@ -155,7 +155,7 @@
 					success:function(datas) {
 						var recentPostBox = document.getElementById("recentPostBox");
 						for(var i=0;i<datas.length;i++){
-							var articleUrl = datas[i-1];
+							var articleUrl = datas[i];
 							var arr = articleUrl.split("/");
 							// var nameArr = arr[2].split("-");
 							// var timeArr = nameArr.slice(0,3);
