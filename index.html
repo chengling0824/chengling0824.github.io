@@ -137,13 +137,10 @@
 					success:function(datas) {
 						var recentPostBox = document.getElementById("recentPostBox");
 						for(var i=0;i<datas.length;i++){
-							console.log(i,datas[i]);
 							var articleUrl = datas[i];
 							var arr = articleUrl.split("/");
-							recentPostBox.innerHTML += "<li class='module-list-item'>"+
-								"<a href='generic.html?"+articleUrl+">"+ arr[2]+"</a>"+
-							"</li>";
-							console.log(i,datas[i],arr,arr[2]);
+							recentPostBox.innerHTML += "<li class='module-list-item'><a href='generic.html?"+articleUrl+">"+arr[2]+"</a></li>";
+							console.log(i,datas[i],arr[2]);
 						}
 					},
 					error:function() {
