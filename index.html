@@ -140,9 +140,6 @@
 							var articleUrl = datas[i];
 							var arr = articleUrl.split("/");
 							recentPostBox.innerHTML += "<a href='generic.html?"+articleUrl+" style='display:block'><li class='module-list-item'>"+arr[2]+"</li></a>";
-							// recentPostBox.innerHTML += "<li class='module-list-item'><a href='generic.html?"+articleUrl+">"+arr[2]+"</a></li>";
-
-							// console.log(i,datas[i],arr[2]);
 						}
 					},
 					error:function() {

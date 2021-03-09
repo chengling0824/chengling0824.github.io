@@ -1,7 +1,7 @@
 function mdToHtml(blogUrl){
     $.ajax({
         type:"get", 
-        url: "../../"+blogUrl, 
+        url: encodeURI(encodeURI("../../"+blogUrl)), 
         dataType:"text",
         async:false,
         success:function(content) {
@@ -24,7 +24,7 @@ function mdToHtml(blogUrl){
             
         },
         error:function() {
-            alert("请求失败");
+            alert("文章请求失败");
         }
     });
 
