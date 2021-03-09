@@ -139,7 +139,7 @@
 						for(var i=0;i<datas.length;i++){
 							var articleUrl = datas[i];
 							var arr = articleUrl.split("/");
-							recentPostBox.innerHTML += "<li class='module-list-item'>"+arr[2]+"</li>";
+							recentPostBox.innerHTML += "<a href='generic.html?"+articleUrl+"><li class='module-list-item'>"+arr[2]+"</li></a>";
 							// recentPostBox.innerHTML += "<li class='module-list-item'><a href='generic.html?"+articleUrl+">"+arr[2]+"</a></li>";
 
 							// console.log(i,datas[i],arr[2]);
