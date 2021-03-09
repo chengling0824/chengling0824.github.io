@@ -139,9 +139,10 @@
 						for(var i=0;i<datas.length;i++){
 							var articleUrl = datas[i];
 							var arr = articleUrl.split("/");
-							var articleLi = "<li class='module-list-item'><a href='generic.html?"+articleUrl+">"+arr[2]+"</a></li>";
-							// <a href='generic.html?"+articleUrl+">"+arr[2]+"</a>
-							recentPostBox.innerHTML += articleLi ;
+							recentPostBox.innerHTML += "<li class='module-list-item'><a href='generic.html?"+articleUrl+">"+arr[2].toString()+"</a></li>";
+							// recentPostBox.innerHTML += "<li class='module-list-item'><a href='generic.html?"+articleUrl+">"+arr[2]+"</a></li>";
+
+							// console.log(i,datas[i],arr[2]);
 						}
 					},
 					error:function() {
